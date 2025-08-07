@@ -16,19 +16,13 @@ const HootDetails = () => {
       setHoot(hootData)
     }
     fetchHoot()
-  }, [hootId])
-
-  if (!hoot) return <main>Loading...</main>
+  }, [])
 
   return (
     <main>
-      <header>
-        <p>{hoot.category.toUpperCase()}</p>
-        <h1>{hoot.title}</h1>
-        <p>
-          {hoot.author.username} posted on {new Date(hoot.createdAt).toLocaleDateString()}
-        </p>
-      </header>
+      Hoot Details
+      <br/>
+      {hootId}
     </main>
   )
 }
